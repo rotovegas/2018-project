@@ -2,6 +2,7 @@
 import paho.mqtt.client as mqtt
 import time
 
+from buzz import morsecode 
 
 def fast(message):
         lcd.write_string(message.payload)
@@ -12,6 +13,7 @@ def fast(message):
 
 def on_message(client, userdata, message):
         print message.payload
+	morsecode()
 
 
 
